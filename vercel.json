@@ -1,0 +1,21 @@
+{
+  "builds": [
+    {
+      "src": "api/update.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/update",
+      "dest": "api/update.py"
+    },
+    {
+      "src": "/",
+      "status": 404
+    }
+  ],
+  "installCommand": "pip install -r requirements.txt",
+  "buildCommand": "",
+  "outputDirectory": "api"
+}
